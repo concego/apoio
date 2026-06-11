@@ -18,6 +18,8 @@
         .card.avulso { border-top-color: #9b59b6; }
         .level-title { color: #2ecc71; font-size: 1.3em; margin: 0; font-weight: bold; display: flex; align-items: center; justify-content: space-between; }
         .price { font-weight: bold; font-size: 1.1em; color: #e67e22; background: #fef5e7; padding: 5px 10px; border-radius: 5px; }
+        .perks { font-size: 0.9em; color: #555; margin-top: 10px; padding-left: 15px; }
+        .perks li { margin-bottom: 3px; }
         .pix-section { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid #2ecc71; margin: 30px 0; }
         .pix-key { font-family: monospace; font-size: 1.2em; color: #27ae60; word-break: break-all; background: #f1f8f4; padding: 10px; border-radius: 5px; display: block; margin: 10px 0; }
         .btn { background: #2ecc71; color: #fff; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1em; transition: 0.2s; text-decoration: none; display: inline-block; }
@@ -38,36 +40,56 @@
 
     <div class="investment-box">
         <h3>Como seu apoio é investido:</h3>
-        <p>Ao se tornar um apoiador, você ajuda diretamente na manutenção e no crescimento do projeto. Os recursos são destinados para:</p>
         <ul class="investment-list">
-            <li><b>Produção de Conteúdo:</b> Aquisição de jogos, equipamentos de áudio/vídeo e softwares acessíveis.</li>
-            <li><b>Infraestrutura:</b> Custos com servidores, hospedagem e ferramentas de automação.</li>
-            <li><b>Serviços e Assinaturas:</b> Pagamento de plataformas essenciais para o fluxo de trabalho do canal.</li>
-            <li><b>Prospecção e Eventos:</b> Presença da equipe em grandes eventos de tecnologia e games para gravação de conteúdo, networking e fortalecimento da marca <b>Eu Concego Jogar</b> no cenário nacional.</li>
+            <li><b>Produção de Conteúdo:</b> Jogos, equipamentos e softwares acessíveis.</li>
+            <li><b>Infraestrutura:</b> Servidores, hospedagem e ferramentas de automação.</li>
+            <li><b>Serviços e Assinaturas:</b> Plataformas essenciais para o fluxo de trabalho.</li>
+            <li><b>Prospecção e Eventos:</b> Presença da equipe em grandes eventos de tecnologia e games.</li>
         </ul>
     </div>
 
     <div class="card">
-        <div class="level-title"><span>🍝 Macarrãozinho</span> <span class="price">R$ 5 / mês</span></div>
+        <div class="level-title"><span>🍝 Macarrãozinho</span> <span class="price">R$ 5</span></div>
+        <ul class="perks">
+            <li>Nome no Mural dos Dragões (Portfólio Web)</li>
+            <li>Selo digital de apoiador</li>
+        </ul>
     </div>
     <div class="card">
-        <div class="level-title"><span>🍜 Você é massa</span> <span class="price">R$ 10 / mês</span></div>
+        <div class="level-title"><span>🍜 Você é massa</span> <span class="price">R$ 10</span></div>
+        <ul class="perks">
+            <li>Nome no Mural dos Dragões</li>
+            <li>Nome na descrição de todos os vídeos do canal</li>
+        </ul>
     </div>
     <div class="card">
-        <div class="level-title"><span>🤝 Parça do Concego</span> <span class="price">R$ 30 / mês</span></div>
+        <div class="level-title"><span>🤝 Parça do Concego</span> <span class="price">R$ 30</span></div>
+        <ul class="perks">
+            <li><b>Acesso ao Grupo VIP (WhatsApp)</b></li>
+            <li>Seu nome falado nos agradecimentos dos vídeos</li>
+            <li>Todas as recompensas anteriores</li>
+        </ul>
     </div>
     <div class="card">
-        <div class="level-title"><span>🐉 Dragão Gamer</span> <span class="price">R$ 50 / mês</span></div>
+        <div class="level-title"><span>🐉 Dragão Gamer</span> <span class="price">R$ 50</span></div>
+        <ul class="perks">
+            <li><b>Crédito Eterno:</b> Seu nome na seção de Agradecimentos Especiais dentro dos Softwares/Projetos que eu desenvolver</li>
+            <li>Destaque VIP no Mural dos Dragões</li>
+            <li>Todas as recompensas anteriores</li>
+        </ul>
     </div>
     <div class="card avulso">
         <div class="level-title" style="color:#9b59b6;"><span>🌬️ Suprimento extra de oxigênio</span> <span class="price" style="color:#9b59b6; background:#f5eef8;">Qualquer Valor</span></div>
+        <ul class="perks">
+            <li>Wallpaper exclusivo gerado via código (Nome + 🐉)</li>
+            <li>Nome no Mural dos Dragões (cor de destaque)</li>
+        </ul>
     </div>
 
     <div class="pix-section">
         <h3>Chave PIX:</h3>
         <code class="pix-key">euconcego@gmail.com</code>
         <button class="btn" onclick="navigator.clipboard.writeText('euconcego@gmail.com'); alert('PIX Copiado!')">Copiar PIX</button>
-        <p style="font-size:0.85em; color:#777; margin-top:10px;">Dica: Você pode agendar o envio mensal no seu banco para manter seu apoio ativo!</p>
     </div>
 
     <form action="https://formspree.io/f/mqakppov" method="POST">
