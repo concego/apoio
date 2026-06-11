@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoie o Eu Concego Jogar 🐉</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; background-color: #f9f9f9; }
+        .card { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #2ecc71; margin-bottom: 20px; text-align: left; }
+        .level-title { color: #2ecc71; font-size: 1.4em; margin: 0; font-weight: bold; }
+        .price { font-weight: bold; font-size: 1.2em; color: #555; margin: 5px 0; }
+        .pix-box { background: #eee; padding: 15px; border-radius: 8px; margin: 20px 0; font-family: monospace; word-break: break-all; font-size: 1.1em; text-align: center; border: 2px dashed #2ecc71; }
+        .copy-btn { background: #2ecc71; color: #fff; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1em; }
+        form { text-align: left; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #3498db; }
+        .field { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        button.send-btn { background: #3498db; color: #fff; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>🐉 Apoie o Eu Concego Jogar</h1>
+    <div class="card">
+        <p class="level-title">Dragãozinho</p>
+        <p class="price">R$ 10 / mês</p>
+        <p>Agradecimento nos vídeos e posts.</p>
+    </div>
+    <div class="card">
+        <p class="level-title">Mestre dos Jogos</p>
+        <p class="price">R$ 30 / mês</p>
+        <p>Tudo anterior + grupo fechado + voto em reviews.</p>
+    </div>
+    <div class="card">
+        <p class="level-title">Herói da Inclusão</p>
+        <p class="price">R$ 50+ / mês</p>
+        <p>Tudo anterior + menção como patrocinador oficial.</p>
+    </div>
+    <div class="card" style="text-align: center;">
+        <h2>PIX: euconcego@gmail.com</h2>
+        <button class="copy-btn" onclick="navigator.clipboard.writeText('euconcego@gmail.com'); alert('PIX Copiado!')">Copiar Chave PIX</button>
+    </div>
+    <form action="https://formspree.io/f/mqakppov" method="POST">
+        <div class="field"><label>Nome:</label><input type="text" name="name" required></div>
+        <div class="field"><label>E-mail:</label><input type="email" name="_replyto" required></div>
+        <div class="field"><label>WhatsApp:</label><input type="tel" name="whatsapp"></div>
+        <input type="hidden" name="_subject" value="Novo Apoiador: Eu Concego Jogar">
+        <button type="submit" class="send-btn">Confirmar Apoio</button>
+    </form>
+</body>
+</html>
