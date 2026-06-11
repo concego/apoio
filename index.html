@@ -6,45 +6,95 @@
     <title>Apoie o Eu Concego Jogar 🐉</title>
     <style>
         body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px; text-align: center; background-color: #f9f9f9; }
-        .card { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #2ecc71; margin-bottom: 20px; text-align: left; }
-        .level-title { color: #2ecc71; font-size: 1.4em; margin: 0; font-weight: bold; }
-        .price { font-weight: bold; font-size: 1.2em; color: #555; margin: 5px 0; }
-        .pix-box { background: #eee; padding: 15px; border-radius: 8px; margin: 20px 0; font-family: monospace; word-break: break-all; font-size: 1.1em; text-align: center; border: 2px dashed #2ecc71; }
-        .copy-btn { background: #2ecc71; color: #fff; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1em; }
-        form { text-align: left; background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #3498db; }
+        h1 { color: #2c3e50; margin-bottom: 10px; }
+        .intro { margin-bottom: 30px; font-size: 1.1em; color: #555; }
+        .card { background: #fff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #2ecc71; margin-bottom: 15px; text-align: left; }
+        .card.avulso { border-top-color: #9b59b6; }
+        .level-title { color: #2ecc71; font-size: 1.3em; margin: 0; font-weight: bold; display: flex; align-items: center; justify-content: space-between; }
+        .price { font-weight: bold; font-size: 1.1em; color: #e67e22; background: #fef5e7; padding: 5px 10px; border-radius: 5px; }
+        .reward { font-size: 0.95em; color: #666; margin-top: 8px; }
+        .pix-section { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid #2ecc71; margin: 30px 0; }
+        .pix-key { font-family: monospace; font-size: 1.2em; color: #27ae60; word-break: break-all; background: #f1f8f4; padding: 10px; border-radius: 5px; display: block; margin: 10px 0; }
+        .btn { background: #2ecc71; color: #fff; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1em; transition: 0.2s; }
+        .btn:hover { background: #27ae60; }
+        form { text-align: left; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid #3498db; }
         .field { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; }
-        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
-        button.send-btn { background: #3498db; color: #fff; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.2em; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #34495e; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1em; }
+        .send-btn { background: #3498db; }
+        .send-btn:hover { background: #2980b9; }
     </style>
 </head>
 <body>
-    <h1>🐉 Apoie o Eu Concego Jogar</h1>
+    <h1>🐉 Eu Concego Jogar</h1>
+    <p class="intro">Sua assinatura recorrente ou apoio avulso mantém o projeto vivo e acessível para todos!</p>
+
     <div class="card">
-        <p class="level-title">Dragãozinho</p>
-        <p class="price">R$ 10 / mês</p>
-        <p>Agradecimento nos vídeos e posts.</p>
+        <div class="level-title"><span>🍝 Macarrãozinho</span> <span class="price">R$ 5 / mês</span></div>
+        <p class="reward">Apoio base para ajudar nos custos fixos de produção e pesquisa.</p>
     </div>
+
     <div class="card">
-        <p class="level-title">Mestre dos Jogos</p>
-        <p class="price">R$ 30 / mês</p>
-        <p>Tudo anterior + grupo fechado + voto em reviews.</p>
+        <div class="level-title"><span>🍜 Massa</span> <span class="price">R$ 10 / mês</span></div>
+        <p class="reward">Acesso antecipado aos temas e agradecimento público nos vídeos.</p>
     </div>
+
     <div class="card">
-        <p class="level-title">Herói da Inclusão</p>
-        <p class="price">R$ 50+ / mês</p>
-        <p>Tudo anterior + menção como patrocinador oficial.</p>
+        <div class="level-title"><span>🎮 Mestre dos Jogos</span> <span class="price">R$ 30 / mês</span></div>
+        <p class="reward">Tudo anterior + grupo de apoiadores + voto na escolha de jogos para review.</p>
     </div>
-    <div class="card" style="text-align: center;">
-        <h2>PIX: euconcego@gmail.com</h2>
-        <button class="copy-btn" onclick="navigator.clipboard.writeText('euconcego@gmail.com'); alert('PIX Copiado!')">Copiar Chave PIX</button>
+
+    <div class="card">
+        <div class="level-title"><span>🔥 Herói da Inclusão</span> <span class="price">R$ 50+ / mês</span></div>
+        <p class="reward">Tudo anterior + destaque como patrocinador oficial nos créditos de todos os projetos.</p>
     </div>
+
+    <div class="card avulso">
+        <div class="level-title" style="color:#9b59b6;"><span>✨ Apoio Avulso</span> <span class="price" style="color:#9b59b6; background:#f5eef8;">Qualquer Valor</span></div>
+        <p class="reward">Para quem quer dar aquela força pontual sem compromisso de recorrência.</p>
+    </div>
+
+    <div class="pix-section">
+        <h3>Chave PIX (E-mail):</h3>
+        <code class="pix-key" id="pixKey">euconcego@gmail.com</code>
+        <button class="btn" onclick="navigator.clipboard.writeText('euconcego@gmail.com'); alert('Chave PIX copiada!')">Copiar Chave PIX</button>
+        <p style="font-size:0.85em; color:#777; margin-top:10px;">Você pode agendar o envio mensal no seu aplicativo do banco para manter a assinatura ativa.</p>
+    </div>
+
     <form action="https://formspree.io/f/mqakppov" method="POST">
-        <div class="field"><label>Nome:</label><input type="text" name="name" required></div>
-        <div class="field"><label>E-mail:</label><input type="email" name="_replyto" required></div>
-        <div class="field"><label>WhatsApp:</label><input type="tel" name="whatsapp"></div>
-        <input type="hidden" name="_subject" value="Novo Apoiador: Eu Concego Jogar">
-        <button type="submit" class="send-btn">Confirmar Apoio</button>
+        <h2>Confirmar Assinatura / Apoio</h2>
+        <div class="field">
+            <label>Como quer ser chamado(a) nos créditos?</label>
+            <input type="text" name="name" required placeholder="Seu nome ou apelido">
+        </div>
+        <div class="field">
+            <label>Qual nível você escolheu?</label>
+            <select name="level">
+                <option value="macarraozinho">🍝 Macarrãozinho (R$ 5/mês)</option>
+                <option value="massa">🍜 Massa (R$ 10/mês)</option>
+                <option value="mestre">🎮 Mestre dos Jogos (R$ 30/mês)</option>
+                <option value="heroi">🔥 Herói da Inclusão (R$ 50+/mês)</option>
+                <option value="avulso">✨ Apoio Avulso (Único / Outro valor)</option>
+            </select>
+        </div>
+        <div class="field">
+            <label>Seu Melhor E-mail:</label>
+            <input type="email" name="_replyto" required placeholder="seu@email.com">
+        </div>
+        <div class="field">
+            <label>Seu WhatsApp (Opcional):</label>
+            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000">
+        </div>
+        <div class="field">
+            <label>Deixe um recado para nós:</label>
+            <textarea name="message" rows="2" placeholder="Opcional"></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Novo Apoiador Macarrãozinho!">
+        <button type="submit" class="btn send-btn">Enviar Confirmação</button>
     </form>
+
+    <footer style="margin-top:50px; font-size:0.9em; color:#888;">
+        <p>Projeto Eu Concego Jogar | Anderson Carvalho & Adri Lima</p>
+    </footer>
 </body>
 </html>
