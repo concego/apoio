@@ -12,7 +12,6 @@
         .card.avulso { border-top-color: #9b59b6; }
         .level-title { color: #2ecc71; font-size: 1.3em; margin: 0; font-weight: bold; display: flex; align-items: center; justify-content: space-between; }
         .price { font-weight: bold; font-size: 1.1em; color: #e67e22; background: #fef5e7; padding: 5px 10px; border-radius: 5px; }
-        .reward { font-size: 0.95em; color: #666; margin-top: 8px; }
         .pix-section { background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid #2ecc71; margin: 30px 0; }
         .pix-key { font-family: monospace; font-size: 1.2em; color: #27ae60; word-break: break-all; background: #f1f8f4; padding: 10px; border-radius: 5px; display: block; margin: 10px 0; }
         .btn { background: #2ecc71; color: #fff; border: none; padding: 15px; border-radius: 8px; cursor: pointer; font-weight: bold; width: 100%; font-size: 1.1em; transition: 0.2s; }
@@ -21,80 +20,65 @@
         .field { margin-bottom: 15px; }
         label { display: block; margin-bottom: 5px; font-weight: bold; color: #34495e; }
         input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; font-size: 1em; }
-        .send-btn { background: #3498db; }
-        .send-btn:hover { background: #2980b9; }
     </style>
 </head>
 <body>
     <h1>🐉 Eu Concego Jogar</h1>
-    <p class="intro">Sua assinatura recorrente ou apoio avulso mantém o projeto vivo e acessível para todos!</p>
+    <p class="intro">Escolha sua assinatura mensal ou envie um apoio avulso!</p>
 
     <div class="card">
         <div class="level-title"><span>🍝 Macarrãozinho</span> <span class="price">R$ 5 / mês</span></div>
-        <p class="reward">Apoio base para ajudar nos custos fixos de produção e pesquisa.</p>
     </div>
 
     <div class="card">
-        <div class="level-title"><span>🍜 Massa</span> <span class="price">R$ 10 / mês</span></div>
-        <p class="reward">Acesso antecipado aos temas e agradecimento público nos vídeos.</p>
+        <div class="level-title"><span>🍜 Você é massa</span> <span class="price">R$ 10 / mês</span></div>
     </div>
 
     <div class="card">
-        <div class="level-title"><span>🎮 Mestre dos Jogos</span> <span class="price">R$ 30 / mês</span></div>
-        <p class="reward">Tudo anterior + grupo de apoiadores + voto na escolha de jogos para review.</p>
+        <div class="level-title"><span>🤝 Parça do Concego</span> <span class="price">R$ 30 / mês</span></div>
     </div>
 
     <div class="card">
-        <div class="level-title"><span>🔥 Herói da Inclusão</span> <span class="price">R$ 50+ / mês</span></div>
-        <p class="reward">Tudo anterior + destaque como patrocinador oficial nos créditos de todos os projetos.</p>
+        <div class="level-title"><span>🐉 Dragão Gamer</span> <span class="price">R$ 50 / mês</span></div>
     </div>
 
     <div class="card avulso">
-        <div class="level-title" style="color:#9b59b6;"><span>✨ Apoio Avulso</span> <span class="price" style="color:#9b59b6; background:#f5eef8;">Qualquer Valor</span></div>
-        <p class="reward">Para quem quer dar aquela força pontual sem compromisso de recorrência.</p>
+        <div class="level-title" style="color:#9b59b6;"><span>🌬️ Suprimento extra de oxigênio</span> <span class="price" style="color:#9b59b6; background:#f5eef8;">Qualquer Valor</span></div>
     </div>
 
     <div class="pix-section">
-        <h3>Chave PIX (E-mail):</h3>
-        <code class="pix-key" id="pixKey">euconcego@gmail.com</code>
-        <button class="btn" onclick="navigator.clipboard.writeText('euconcego@gmail.com'); alert('Chave PIX copiada!')">Copiar Chave PIX</button>
-        <p style="font-size:0.85em; color:#777; margin-top:10px;">Você pode agendar o envio mensal no seu aplicativo do banco para manter a assinatura ativa.</p>
+        <h3>Chave PIX:</h3>
+        <code class="pix-key">euconcego@gmail.com</code>
+        <button class="btn" onclick="navigator.clipboard.writeText('euconcego@gmail.com'); alert('PIX Copiado!')">Copiar PIX</button>
+        <p style="font-size:0.85em; color:#777; margin-top:10px;">Dica: Agende o envio mensal no seu banco para manter sua assinatura ativa!</p>
     </div>
 
     <form action="https://formspree.io/f/mqakppov" method="POST">
-        <h2>Confirmar Assinatura / Apoio</h2>
+        <h2>Confirmar meu Apoio</h2>
         <div class="field">
-            <label>Como quer ser chamado(a) nos créditos?</label>
-            <input type="text" name="name" required placeholder="Seu nome ou apelido">
+            <label>Nome:</label>
+            <input type="text" name="name" required>
         </div>
         <div class="field">
-            <label>Qual nível você escolheu?</label>
+            <label>Nível Escolhido:</label>
             <select name="level">
-                <option value="macarraozinho">🍝 Macarrãozinho (R$ 5/mês)</option>
-                <option value="massa">🍜 Massa (R$ 10/mês)</option>
-                <option value="mestre">🎮 Mestre dos Jogos (R$ 30/mês)</option>
-                <option value="heroi">🔥 Herói da Inclusão (R$ 50+/mês)</option>
-                <option value="avulso">✨ Apoio Avulso (Único / Outro valor)</option>
+                <option value="macarraozinho">Macarrãozinho (R$ 5)</option>
+                <option value="massa">Você é massa (R$ 10)</option>
+                <option value="parca">Parça do Concego (R$ 30)</option>
+                <option value="dragao">Dragão Gamer (R$ 50)</option>
+                <option value="oxigenio">Suprimento extra de oxigênio (Avulso)</option>
             </select>
         </div>
         <div class="field">
-            <label>Seu Melhor E-mail:</label>
-            <input type="email" name="_replyto" required placeholder="seu@email.com">
+            <label>E-mail:</label>
+            <input type="email" name="_replyto" required>
         </div>
         <div class="field">
-            <label>Seu WhatsApp (Opcional):</label>
-            <input type="tel" name="whatsapp" placeholder="(00) 00000-0000">
+            <label>WhatsApp:</label>
+            <input type="tel" name="whatsapp">
         </div>
-        <div class="field">
-            <label>Deixe um recado para nós:</label>
-            <textarea name="message" rows="2" placeholder="Opcional"></textarea>
-        </div>
-        <input type="hidden" name="_subject" value="Novo Apoiador Macarrãozinho!">
-        <button type="submit" class="btn send-btn">Enviar Confirmação</button>
+        <input type="hidden" name="_subject" value="Novo Apoiador: Eu Concego Jogar">
+        <button type="submit" class="btn" style="background:#3498db;">Confirmar no Sistema</button>
     </form>
-
-    <footer style="margin-top:50px; font-size:0.9em; color:#888;">
-        <p>Projeto Eu Concego Jogar | Anderson Carvalho & Adri Lima</p>
-    </footer>
 </body>
 </html>
